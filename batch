@@ -1,0 +1,9 @@
+#!/bin/bash
+#SBATCH --qos=1gpu1d
+#SBATCH --gres=gpu:1
+#SBATCH --time=30
+#SBATCH --partition=common
+#SBATCH --mem=16GB
+#SBATCH --output=batch.log
+cd $SLURM_SUBMIT_DIR
+srun ./run.sh
